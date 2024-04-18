@@ -1,8 +1,7 @@
 @font-face {
   font-family: "icomoon";
   src: url("../fonts/icomoon/icomoon.eot?srf3rx");
-  src: url("../fonts/icomoon/icomoon.eot?srf3rx#iefix")
-      format("embedded-opentype"),
+  src: url("../fonts/icomoon/icomoon.eot?srf3rx#iefix") format("embedded-opentype"),
     url("../fonts/icomoon/icomoon.ttf?srf3rx") format("truetype"),
     url("../fonts/icomoon/icomoon.woff?srf3rx") format("woff"),
     url("../fonts/icomoon/icomoon.svg?srf3rx#icomoon") format("svg");
@@ -349,7 +348,7 @@ figure {
   padding-top: 0;
 }
 .info li .first-block {
-  width: 40%;
+  width: 30%;
   display: block;
   float: left;
   color: #000;
@@ -930,7 +929,9 @@ figure {
   -webkit-flex-wrap: wrap;
   -moz-flex-wrap: wrap;
   width: 100%;
-  float: left;
+  /* float: left; */
+  justify-content: center;
+  align-items: center;
 }
 #fh5co-consult .video,
 #fh5co-consult .choose {
@@ -1333,6 +1334,38 @@ input[type="text"] {
 
 .js .animate-box {
   opacity: 0;
+}
+
+.pt-15 {
+  padding-top: 15px;
+}
+
+#message {
+  resize: vertical;
+  min-height: 280px;
+  max-height: 600px;
+}
+
+.contact-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  width: 100%;
+  /* float: left; */
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contact-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */
