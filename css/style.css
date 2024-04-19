@@ -1346,8 +1346,8 @@ input[type="text"] {
   max-height: 600px;
 } */
 
-/* .contact-container { */
-  /* display: -webkit-box;
+.contact-container {
+  display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -1356,14 +1356,12 @@ input[type="text"] {
   -webkit-flex-wrap: wrap;
   -moz-flex-wrap: wrap;
   width: 100%;
-  float: left;
   justify-content: center;
   align-items: center;
-  gap: 1rem; 
-  display: inline-block;
+  gap: 1rem;
 }
 
-.contact-container p {
+/*.contact-container p {
   display: inline-block;
 }
 
