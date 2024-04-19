@@ -1367,10 +1367,29 @@ input[type="text"] {
   display: inline-block;
 }
 
+.contact-container > p {
+  margin-right: 1rem;
+}
+
 .contact-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  border: none !important;
+  padding: 13px 30px;
+  border-radius: 30px;
+  color: #2b2e4a;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  background: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Space Mono", Arial, serif;
+  transition: 0.3s;
+}
+
+.contact-btn:hover {
+  background: #ff9b1a !important;
+  box-shadow: none !important;
+  outline: none !important;
 }
 
 /*# sourceMappingURL=style.css.map */
