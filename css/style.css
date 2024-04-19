@@ -1347,7 +1347,7 @@ input[type="text"] {
 }
 
 .contact-container {
-  display: -webkit-box;
+  /* display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -1356,10 +1356,15 @@ input[type="text"] {
   -webkit-flex-wrap: wrap;
   -moz-flex-wrap: wrap;
   width: 100%;
-  /* float: left; */
+  float: left;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 1rem; */
+  display: inline-block;
+}
+
+.contact-container p {
+  display: inline-block;
 }
 
 .contact-btn {
