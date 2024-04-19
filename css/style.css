@@ -1340,13 +1340,13 @@ input[type="text"] {
   padding-top: 15px;
 }
 
-#message {
+/* #message {
   resize: vertical;
   min-height: 280px;
   max-height: 600px;
-}
+} */
 
-.contact-container {
+/* .contact-container { */
   /* display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1359,7 +1359,7 @@ input[type="text"] {
   float: left;
   justify-content: center;
   align-items: center;
-  gap: 1rem; */
+  gap: 1rem; 
   display: inline-block;
 }
 
@@ -1393,3 +1393,35 @@ input[type="text"] {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+#fh5co-started .fh5co-social-icons {
+  margin: 0;
+  padding: 0;
+}
+#fh5co-started .fh5co-social-icons li {
+  padding: 0;
+  list-style: none;
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+#fh5co-started .fh5co-social-icons li a {
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  color: #fff;
+  background: transparent;
+  padding: 10px 10px 2px 10px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  border-radius: 2px;
+}
+#fh5co-started .fh5co-social-icons li a i {
+  font-size: 30px;
+}
+#fh5co-started .fh5co-social-icons li a:hover {
+  background: #2b2e4a;
+}
