@@ -1,629 +1,687 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Matheus Gomes</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Desenvolvedor Full Stack Sênior e Tech Lead com 10+ anos de experiência em Node.js, React.js, microserviços e cloud. Disponível para projetos e consultoria." />
-	<meta name="keywords" content="Matheus Gomes, tech lead, senior fullstack developer, nodejs, react, nestjs, typescript, microservices, aws, docker, kubernetes" />
-	<meta name="Matheus Gomes" content="matheusgomes-dev.github.io" />
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<!-- 
-	//////////////////////////////////////////////////////
+  <title>Matheus Gomes — Tech Lead & Dev Fullstack Sênior</title>
+  <meta name="description" content="Tech Lead e Desenvolvedor Fullstack Sênior com 10+ anos de experiência em Node.js, React, TypeScript, microsserviços e cloud. Disponível para projetos e consultoria." />
+  <meta name="keywords" content="Matheus Gomes, tech lead, senior fullstack developer, nodejs, react, nestjs, typescript, microservices, aws, docker, kubernetes" />
+  <meta name="author" content="Matheus Gomes" />
 
-	FREE HTML5 TEMPLATE 
-	DESIGNED & DEVELOPED by FreeHTML5.co
-		
-	Website: 		http://freehtml5.co/
-	Email: 			info@freehtml5.co
-	Twitter: 		http://twitter.com/fh5co
-	Facebook: 		https://www.facebook.com/fh5co
+  <link rel="shortcut icon" href="images/icon.ico" type="image/x-icon">
+  <link rel="icon" href="images/icon.ico" type="image/x-icon">
 
-	//////////////////////////////////////////////////////
-	 -->
+  <meta property="og:title" content="Matheus Gomes — Tech Lead & Senior Fullstack Developer"/>
+  <meta property="og:image" content="https://i.imgur.com/eG9Sq3D.png"/>
+  <meta property="og:url" content="https://matheusgomes-dev.github.io/website"/>
+  <meta property="og:site_name" content="Matheus Gomes"/>
+  <meta property="og:description" content="Tech Lead e Dev Fullstack Sênior com 10+ anos de experiência em Node.js, React, microsserviços e cloud."/>
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Matheus Gomes | Tech Lead & Senior Fullstack Developer" />
+  <meta name="twitter:image" content="https://i.imgur.com/eG9Sq3D.png" />
+  <meta name="twitter:url" content="https://matheusgomes-dev.github.io/website" />
 
-	 <!-- Favicon -->
-	 <link rel="shortcut icon" href="images/icon.ico" type="image/x-icon">
-	 <link rel="icon" href="images/icon.ico" type="image/x-icon" /> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-  	<!-- Facebook and Twitter integration -->
-	<meta property="og:title" content="Matheus Gomes"/>
-	<meta property="og:image" content="https://i.imgur.com/eG9Sq3D.png"/>
-	<meta property="og:url" content="https://matheusgomes-dev.github.io/website"/>
-	<meta property="og:site_name" content="Matheus Gomes"/>
-	<meta property="og:description" content="Desenvolvedor Full Stack Sênior e Tech Lead com 10+ anos de experiência em Node.js, React.js, microserviços e cloud."/>
+  <link rel="stylesheet" href="css/icomoon.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-	<meta name="twitter:title" content="Matheus Gomes | Tech Lead Full Stack" />
-	<meta name="twitter:image" content="https://i.imgur.com/eG9Sq3D.png" />
-	<meta name="twitter:url" content="https://matheusgomes-dev.github.io/website" />
-	<meta name="twitter:card" content="summary_large_image" />
+<!-- ===== NAV ===== -->
+<nav id="nav" role="navigation" aria-label="Navegação principal">
+  <div class="nav-inner">
+    <a class="nav-logo" href="#hero" aria-label="Voltar ao topo">MG</a>
+    <ul class="nav-links">
+      <li><a href="#about" data-i18n="nav.about">Sobre</a></li>
+      <li><a href="#experience" data-i18n="nav.experience">Experiência</a></li>
+      <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+      <li><a href="#services" data-i18n="nav.services">Serviços</a></li>
+      <li><a href="#contact" data-i18n="nav.contact">Contato</a></li>
+    </ul>
+    <div class="lang-toggle" role="group" aria-label="Idioma">
+      <button class="lang-btn active" data-lang="pt" onclick="setLang('pt')" aria-pressed="true">PT</button>
+      <button class="lang-btn" data-lang="en" onclick="setLang('en')" aria-pressed="false">EN</button>
+    </div>
+    <button class="nav-menu-btn" id="navMenuBtn" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="navMobile" aria-hidden="true">
+    <ul>
+      <li><a href="#about" data-i18n="nav.about" onclick="closeMobileMenu()">Sobre</a></li>
+      <li><a href="#experience" data-i18n="nav.experience" onclick="closeMobileMenu()">Experiência</a></li>
+      <li><a href="#skills" data-i18n="nav.skills" onclick="closeMobileMenu()">Skills</a></li>
+      <li><a href="#services" data-i18n="nav.services" onclick="closeMobileMenu()">Serviços</a></li>
+      <li><a href="#contact" data-i18n="nav.contact" onclick="closeMobileMenu()">Contato</a></li>
+    </ul>
+    <div class="lang-toggle" role="group" aria-label="Idioma">
+      <button class="lang-btn active" data-lang="pt" onclick="setLang('pt')">PT</button>
+      <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</nav>
 
-	<link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
-	
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="css/animate.css">
-	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="css/icomoon.css">
-	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="css/bootstrap.css">
+<!-- ===== HERO ===== -->
+<section id="hero" aria-label="Introdução">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-badge">
+        <span class="badge-dot" aria-hidden="true"></span>
+        <span data-i18n="hero.badge">Disponível para novos projetos</span>
+      </div>
+      <p class="hero-greeting" data-i18n="hero.greeting">Olá, eu sou</p>
+      <h1 class="hero-name">Matheus Gomes</h1>
+      <div class="hero-rule" aria-hidden="true"></div>
+      <h2 class="hero-title" data-i18n="hero.title">Tech Lead &amp; Dev Fullstack Sênior</h2>
+      <p class="hero-stack">Node.js · React · TypeScript · Microsserviços · Cloud</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary" data-i18n="hero.cta">Entrar em contato</a>
+        <a href="https://www.linkedin.com/in/matheus-gomes-node-dev/" target="_blank" rel="noopener" class="btn-secondary" data-i18n="hero.linkedin">Ver LinkedIn</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="stat-num">10<span class="stat-plus">+</span></span>
+          <span class="stat-label" data-i18n="hero.stat.years">anos de exp.</span>
+        </div>
+        <div class="hero-stat-sep" aria-hidden="true"></div>
+        <div class="hero-stat">
+          <span class="stat-num">7<span class="stat-plus">+</span></span>
+          <span class="stat-label" data-i18n="hero.stat.companies">empresas</span>
+        </div>
+        <div class="hero-stat-sep" aria-hidden="true"></div>
+        <div class="hero-stat">
+          <span class="stat-num">10<span class="stat-plus">+</span></span>
+          <span class="stat-label" data-i18n="hero.stat.apis">APIs integradas</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <div class="hero-photo-frame">
+        <img src="images/user-photo.jpeg" alt="Foto de Matheus Gomes" />
+      </div>
+      <div class="hero-tech-tags" aria-hidden="true">
+        <span class="htt htt-1">Node.js</span>
+        <span class="htt htt-2">React</span>
+        <span class="htt htt-3">TypeScript</span>
+        <span class="htt htt-4">Docker</span>
+        <span class="htt htt-5">AWS</span>
+      </div>
+    </div>
+  </div>
+  <a href="#about" class="scroll-indicator" aria-label="Ir para sobre">
+    <span aria-hidden="true"></span>
+  </a>
+</section>
 
-	<!-- Theme style  -->
-	<link rel="stylesheet" href="css/style.css">
+<!-- ===== ABOUT ===== -->
+<section id="about">
+  <div class="container">
+    <h2 class="section-title" data-i18n="about.title">Sobre mim</h2>
+    <div class="about-grid">
+      <div class="about-info">
+        <dl class="info-list">
+          <div class="info-item">
+            <dt data-i18n="about.nameLabel">Nome</dt>
+            <dd>Matheus Gomes</dd>
+          </div>
+          <div class="info-item">
+            <dt>Email</dt>
+            <dd><a href="mailto:matheusgdeveloper@gmail.com">matheusgdeveloper@gmail.com</a></dd>
+          </div>
+          <div class="info-item">
+            <dt data-i18n="about.phoneLabel">Telefone</dt>
+            <dd><a href="https://wa.me/5517992856073" target="_blank" rel="noopener">+55 (17) 99285-6073</a></dd>
+          </div>
+          <div class="info-item">
+            <dt>LinkedIn</dt>
+            <dd><a href="https://www.linkedin.com/in/matheus-gomes-node-dev/" target="_blank" rel="noopener">matheus-gomes-node-dev</a></dd>
+          </div>
+          <div class="info-item">
+            <dt data-i18n="about.locationLabel">Localização</dt>
+            <dd data-i18n="about.location">Bebedouro, SP — Brasil</dd>
+          </div>
+        </dl>
+        <ul class="social-icons" aria-label="Redes sociais">
+          <li><a href="https://www.linkedin.com/in/matheus-gomes-node-dev/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="icon-linkedin2" aria-hidden="true"></i></a></li>
+          <li><a href="https://wa.me/5517992856073" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="icon-whatsapp" aria-hidden="true"></i></a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=100005311906215" target="_blank" rel="noopener" aria-label="Facebook"><i class="icon-facebook2" aria-hidden="true"></i></a></li>
+        </ul>
+      </div>
+      <div class="about-bio">
+        <p data-i18n="about.p1">Comecei a programar em 2015 e, desde então, nunca tive um projeto igual ao anterior. Passei por setores bem diferentes — aviação, saúde, fintech, hotelaria, governo — e essa variedade me ensinou a enxergar os problemas antes de pensar na solução técnica.</p>
+        <p data-i18n="about.p2">Hoje sou Tech Lead na Global Hitss. Uma das entregas que mais me orgulha foi construir, junto com minha equipe, um sistema para o governo federal integrando mais de 10 APIs de terceiros. Durante uma migração crítica de dados legados, consegui triplicar a performance do sistema usando concorrência com Workers em Node.js — o tipo de desafio que me faz levantar cedo.</p>
+        <p data-i18n="about.p3">Minha praia é o back-end: arquitetura que aguenta crescimento, APIs que fazem sentido, código que não vira pesadelo em seis meses. Node.js e React são meu stack principal hoje, mas o que realmente importa pra mim é entregar algo que funcione de verdade e que a equipe consiga evoluir.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
+<!-- ===== EXPERIENCE ===== -->
+<section id="experience" class="section-alt">
+  <div class="container">
+    <h2 class="section-title" data-i18n="experience.title">Experiência</h2>
 
-	</head>
-	<body>
-		
-	<div class="fh5co-loader"></div>
-	
-	<div id="page">	
-	<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" style="background-image:url(images/cover_bg_3.jpg);" data-stellar-background-ratio="0.5">
-		<div class="overlay"></div>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 text-center">
-					<div class="display-t js-fullheight">
-						<div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
-							<div class="profile-thumb" style="background: url(images/user-photo.jpeg);"></div>
-							<h1><span>Matheus Gomes</span></h1>
-							<h3><span>Desenvolvedor Full Stack Sênior | Tech Lead | Node.js &amp; React</span></h3>
-							<p>
-								<ul class="fh5co-social-icons">
-									<li><a href="https://www.facebook.com/profile.php?id=100005311906215" target="_blank"><i class="icon-facebook2"></i></a></li>
-									<li><a href="https://www.linkedin.com/in/matheus-gomes-node-dev/" target="_blank"><i class="icon-linkedin2"></i></a></li>
-									<li><a href="https://wa.me/5517992856073" target="_blank"><i class="icon-whatsapp"></i></a></li>
-								</ul>
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</header>
+    <div class="exp-list" role="list">
 
-	<div id="fh5co-about" class="animate-box">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Sobre mim</h2>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-4">
-					<ul class="info">
-						<li><span class="first-block">Nome:</span><span class="second-block">Matheus Gomes</span></li>
-						<li><span class="first-block">Email:</span><span class="second-block">matheusgdeveloper@gmail.com</span></li>
-						<li><span class="first-block">Website:</span><span class="second-block">https://matheusgomes-dev.github.io/website</span></li>
-						<li><span class="first-block">Telefone:</span><span class="second-block">+55 17 99285-6073</span></li>
-					</ul>
-				</div>
-				<div class="col-md-8">
-					<h2>Hello There!</h2>
-					<p>Sou formado na área de tecnologia da informação e especializado na criação de software sob medida. Atuo profissionalmente há mais de 10 anos tendo liderado squads ágeis e entregado projetos de alta complexidade em diferentes segmentos.</p>
-					<p>Atualmente como Tech Lead na Global Hitss, desenvolvi um sistema para o governo federal com mais de 10 integrações com APIs de terceiros e tripliquei a performance do sistema durante uma migração de dados legados implementando concorrência com Worker Loads em Node.js.</p>
-					<p>Stack principal: Node.js (NestJS, Express), React.js, Next.js, TypeScript, PostgreSQL, MongoDB, Redis, Docker, Kubernetes e AWS. Aplico consistentemente Clean Code, SOLID e Clean Architecture para garantir sistemas escaláveis e de fácil manutenção.</p>
-					<p>
-						<ul class="fh5co-social-icons">
-							<li><a href="https://www.facebook.com/profile.php?id=100005311906215" target="_blank"><i class="icon-facebook2"></i></a></li>
-							<li><a href="https://www.linkedin.com/in/matheus-gomes-node-dev/" target="_blank"><i class="icon-linkedin2"></i></a></li>
-							<li><a href="https://wa.me/5517992856073" target="_blank"><i class="icon-whatsapp"></i></a></li>
-						</ul>
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
+      <article class="exp-item" role="listitem">
+        <div class="exp-meta">
+          <span class="exp-period">2022 — <span data-i18n="exp.present">Atualmente</span></span>
+          <span class="exp-company">Global Hitss / América Móvil</span>
+        </div>
+        <div class="exp-content">
+          <h3 class="exp-role" data-i18n="exp.globalHitss.role">Líder de Squad / Tech Lead</h3>
+          <ul>
+            <li data-i18n="exp.globalHitss.b1">Liderança de squad com 5 desenvolvedores seniores e plenos, garantindo entregas de alta qualidade.</li>
+            <li data-i18n="exp.globalHitss.b2">Desenvolvimento de sistema para o governo federal integrando mais de 10 APIs de terceiros.</li>
+            <li data-i18n="exp.globalHitss.b3">Performance triplicada durante migração de dados legados via Worker Loads (concorrência) em Node.js.</li>
+            <li data-i18n="exp.globalHitss.b4">Arquitetura de microsserviços com Docker, Kubernetes, AWS S3, MongoDB e Redis.</li>
+          </ul>
+          <p class="exp-stack">Node.js · Next.js · React · TypeScript · PostgreSQL · MongoDB · Redis · AWS S3/EC2 · Docker · Kubernetes · Swagger</p>
+        </div>
+      </article>
 
-	<div id="fh5co-resume" class="fh5co-bg-color">
-		<div class="container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Meu Resumo</h2>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12 col-md-offset-0">
-					<ul class="timeline">
-						<li class="timeline-heading text-center animate-box">
-							<div><h3>Experiência de Trabalho</h3></div>
-						</li>
-						<li class="animate-box timeline-unverted">
-							<div class="timeline-badge"><i class="icon-suitcase"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Desenvolvedor de Sistemas</h3>
-									<span class="company">Syshouse Informática - 2015 - 2017</span>
-								</div>
-								<div class="timeline-body">
-									<p>Desenvolvimento e manutenção de sistemas desktop e banco de dados SQL Server nos setores de comércio, farmacêutico e transportes.</p>
-								</div>
-							</div>
-						</li>
-						<li class="timeline-inverted animate-box">
-							<div class="timeline-badge"><i class="icon-suitcase"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Desenvolvedor FullStack</h3>
-									<span class="company">Trinapse Software - 2017 - 2020</span>
-								</div>
-								<div class="timeline-body">
-									<p>Desenvolvimento e manutenção de sistemas web, aplicativos móveis, intranet e bancos de dados. Atuação nos setores: aérero, financeiro, usineiro, imobiliário, transportes e alimentação.</p>
-								</div>
-							</div>
-						</li>
-						<li class="animate-box timeline-unverted">
-							<div class="timeline-badge"><i class="icon-suitcase"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Desenvolvedor FullStack</h3>
-									<span class="company">Solfarma Distribuidora de Medicamentos - 2020 - 2021</span>
-								</div>
-								<div class="timeline-body">
-									<p>Desenvolvimento e manutenção no ERP e em sistemas web. Criação de e-commerce do zero em React Js. Regras de negócio do ERP todas criadas e mantidas no banco de dados (procedures, functions, views, triggers).</p>
-								</div>
-							</div>
-						</li>
-						<li class="animate-box timeline-inverted">
-							<div class="timeline-badge"><i class="icon-suitcase"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Líder Backend</h3>
-									<span class="company">Academia da Pele - 2021 - 2022</span>
-								</div>
-								<div class="timeline-body">
-									<p>Arquitetura, estruturação e desenvolvimento de sistemas web e APIs. Migração de toda infraestrutura para ambiente cloud utilizando o GCP. Diversas integrações com terceiros como integração de agenda, prontuários eletrônico e pagamentos.</p>
-								</div>
-							</div>
-						</li>
-						<li class="animate-box timeline-unverted">
-							<div class="timeline-badge"><i class="icon-suitcase"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Líder de Squad</h3>
-									<span class="company">Spread Informática - 2022 - 2022</span>
-								</div>
-								<div class="timeline-body">
-									<p>Arquitetura, estruturação e desenvolvimento de sistemas web e APIs. Code review e auxílio a outros desenvolvedores da equipe. Atuação no setor de saúde.</p>
-								</div>
-							</div>
-						</li>
-						<li class="animate-box timeline-inverted">
-							<div class="timeline-badge"><i class="icon-suitcase"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Líder Frontend (part-time)</h3>
-									<span class="company">Vega I.T. - 2022 - 2024</span>
-								</div>
-								<div class="timeline-body">
-									<p>Arquitetura, estruturação, desenvolvimento de sistemas web, consumo de APIs, code review e auxílio à equipe frontend. Atuação com ReactJs e NextJs no setor hoteleiro.</p>
-								</div>
-							</div>
-						</li>
-						<li class="animate-box timeline-unverted">
-							<div class="timeline-badge"><i class="icon-suitcase"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Líder de Squad</h3>
-									<span class="company">Global Hitss - 2022 - Atualmente</span>
-								</div>
-								<div class="timeline-body">
-									<p>Liderança de equipe com 5 desenvolvedores. Desenvolvimento de sistema para o governo federal integrando mais de 10 APIs de terceiros. Performance do sistema triplicada durante migração de dados legados via Worker Loads (concorrência) em Node.js. Stack: Node.js, Next.js, React, TypeScript, PostgreSQL, MongoDB, Redis, AWS S3, Docker, Kubernetes, Microserviços.</p>
-								</div>
-							</div>
-						</li>
+      <article class="exp-item" role="listitem">
+        <div class="exp-meta">
+          <span class="exp-period">2022 — 2024</span>
+          <span class="exp-company">Vega I.T. <span data-i18n="exp.parttime">(part-time)</span></span>
+        </div>
+        <div class="exp-content">
+          <h3 class="exp-role" data-i18n="exp.vega.role">Líder Frontend</h3>
+          <ul>
+            <li data-i18n="exp.vega.b1">Arquitetura e desenvolvimento de sistemas web para o setor hoteleiro.</li>
+            <li data-i18n="exp.vega.b2">Consumo de APIs, code review e liderança do time frontend.</li>
+          </ul>
+          <p class="exp-stack">React · Next.js · TypeScript · PostgreSQL · Styled Components · Context API</p>
+        </div>
+      </article>
 
-						<br>
-						<li class="timeline-heading text-center animate-box">
-							<div><h3>Educação</h3></div>
-						</li>
-						<li class="timeline-inverted animate-box">
-							<div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Bacharel em Sistemas de Informação</h3>
-									<span class="company">Centro Universitário Unifafibe - 2013 - 2016</span>
-								</div>
-								<div class="timeline-body">
-									<p>Curso superior que capacita o profissional a projetar, arquitetar e desenvolver softwares de ponta a ponta. Também habilita o profissional a gerenciar projetos, prazos e todo o ecossistema de uma aplicação digital.</p>
-								</div>
-							</div>
-						</li>
-			    	</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-	
+      <article class="exp-item" role="listitem">
+        <div class="exp-meta">
+          <span class="exp-period">2022</span>
+          <span class="exp-company">Spread Teleinformática</span>
+        </div>
+        <div class="exp-content">
+          <h3 class="exp-role" data-i18n="exp.spread.role">Líder Técnico</h3>
+          <ul>
+            <li data-i18n="exp.spread.b1">Arquitetura e desenvolvimento de sistemas web e APIs com Clean Architecture.</li>
+            <li data-i18n="exp.spread.b2">Code review, documentação técnica e mentoria de desenvolvedores.</li>
+          </ul>
+          <p class="exp-stack">Node.js · MongoDB · Azure · TypeScript · React · Clean Architecture</p>
+        </div>
+      </article>
 
-	<div id="fh5co-features" class="animate-box">
-		<div class="container">
-			<div class="services-padding">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-						<h2>Meus Serviços</h2>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-4 text-center">
-						<div class="feature-left">
-							<span class="icon">
-								<i class="icon-browser"></i>
-							</span>
-							<div class="feature-copy">
-								<h3>Desenvolvimento Web</h3>
-								<p>Criação de sites, aplicações web, sistemas de gerenciamento de estoque, delivery, entre muitos outros, utilizando as tecnologias React e Node ou .NET, a depender do projeto.</p>
-							</div>
-						</div>
-					</div>
+      <article class="exp-item" role="listitem">
+        <div class="exp-meta">
+          <span class="exp-period">2021 — 2022</span>
+          <span class="exp-company">Academia da Pele</span>
+        </div>
+        <div class="exp-content">
+          <h3 class="exp-role" data-i18n="exp.academiadapele.role">Líder Backend</h3>
+          <ul>
+            <li data-i18n="exp.academiadapele.b1">Arquitetura e migração de toda a infraestrutura para a nuvem (GCP).</li>
+            <li data-i18n="exp.academiadapele.b2">Integrações com agenda, prontuários eletrônicos e gateways de pagamento.</li>
+            <li data-i18n="exp.academiadapele.b3">Otimização de queries SQL, reduzindo tempos de resposta significativamente.</li>
+          </ul>
+          <p class="exp-stack">Node.js · NestJS · Express · TypeORM · React.js · GCP · SQL Server · C#</p>
+        </div>
+      </article>
 
-					<div class="col-md-4 text-center">
-						<div class="feature-left">
-							<span class="icon">
-								<i class="icon-mobile"></i>
-							</span>
-							<div class="feature-copy">
-								<h3>Desenvolvimento Mobile</h3>
-								<p>Criação de aplicativos para Android e iOS empregando a tecnologia React Native que é amplamente utilizada por grandes empresas.</p>
-							</div>
-						</div>
+      <article class="exp-item" role="listitem">
+        <div class="exp-meta">
+          <span class="exp-period">2020 — 2021</span>
+          <span class="exp-company">Solfarma</span>
+        </div>
+        <div class="exp-content">
+          <h3 class="exp-role" data-i18n="exp.solfarma.role">Desenvolvedor Fullstack</h3>
+          <ul>
+            <li data-i18n="exp.solfarma.b1">Desenvolvimento e manutenção do ERP e e-commerce criado do zero em React.</li>
+            <li data-i18n="exp.solfarma.b2">Regras de negócio mantidas em banco de dados — procedures, functions, views e triggers.</li>
+          </ul>
+          <p class="exp-stack">C# · React · Redux · Node.js · SQL Server · Kotlin · Styled Components</p>
+        </div>
+      </article>
 
-					</div>
-					<div class="col-md-4 text-center">
-						<div class="feature-left">
-							<span class="icon">
-								<i class="icon-code"></i>
-							</span>
-							<div class="feature-copy">
-								<h3>Desenvolvimento de APIs</h3>
-								<p>Criação de APIs para seu aplicativo ou sistema web utilizando o padrão Restfull com as tecnologias NodeJs ou .NET.</p>
-							</div>
-						</div>
-					</div>
-				</div>
+      <article class="exp-item" role="listitem">
+        <div class="exp-meta">
+          <span class="exp-period">2017 — 2020</span>
+          <span class="exp-company">Trinapse Software &amp; Mobile</span>
+        </div>
+        <div class="exp-content">
+          <h3 class="exp-role" data-i18n="exp.trinapse.role">Desenvolvedor Fullstack</h3>
+          <ul>
+            <li data-i18n="exp.trinapse.b1">Sistemas web e apps mobile para setores: aéreo, financeiro, usineiro, imobiliário e alimentação.</li>
+            <li data-i18n="exp.trinapse.b2">Implementação de soluções cloud com AWS e Azure; redução de bugs via code review.</li>
+          </ul>
+          <p class="exp-stack">C# · ASP.NET · Node.js · React · React Native · Xamarin Forms · SQL Server · AWS · Azure</p>
+        </div>
+      </article>
 
+      <article class="exp-item" role="listitem">
+        <div class="exp-meta">
+          <span class="exp-period">2015 — 2017</span>
+          <span class="exp-company">Syshouse Informática</span>
+        </div>
+        <div class="exp-content">
+          <h3 class="exp-role" data-i18n="exp.syshouse.role">Desenvolvedor</h3>
+          <ul>
+            <li data-i18n="exp.syshouse.b1">Desenvolvimento e manutenção de sistemas desktop para comércio, transportadoras e farmácias.</li>
+          </ul>
+          <p class="exp-stack">Delphi · SQL Server</p>
+        </div>
+      </article>
 
-				<div class="row">
-					<div class="col-md-4 text-center">
+    </div>
 
-						<div class="feature-left">
-							<span class="icon">
-								<i class="icon-info"></i>
-							</span>
-							<div class="feature-copy">
-								<h3>Consultoria</h3>
-								<p>Ofereço consultoria para sua aplicação em andamento ou ideia de novo projeto.</p>
-							</div>
-						</div>
+    <div class="edu-block">
+      <h3 class="edu-title" data-i18n="education.title">Educação</h3>
+      <div class="exp-list">
+        <article class="exp-item" role="listitem">
+          <div class="exp-meta">
+            <span class="exp-period">2013 — 2016</span>
+            <span class="exp-company">Centro Universitário Unifafibe</span>
+          </div>
+          <div class="exp-content">
+            <h3 class="exp-role" data-i18n="education.degree">Bacharel em Sistemas de Informação</h3>
+            <p class="exp-stack">Bebedouro, SP — Brasil</p>
+          </div>
+        </article>
+      </div>
+    </div>
 
-					</div>
+  </div>
+</section>
 
-					<div class="col-md-4 text-center">
-						<div class="feature-left">
-							<span class="icon">
-								<i class="icon-lightbulb"></i>
-							</span>
-							<div class="feature-copy">
-								<h3>Liderança Técnica</h3>
-								<p>Liderança de squads ágeis, definição de arquitetura, code review, mentoria de desenvolvedores e alinhamento técnico com stakeholders.</p>
-							</div>
-						</div>
+<!-- ===== SKILLS ===== -->
+<section id="skills">
+  <div class="container">
+    <h2 class="section-title" data-i18n="skills.title">Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h4 class="skill-group-label">Backend</h4>
+        <div class="tag-list">
+          <span class="tag">Node.js</span>
+          <span class="tag">NestJS</span>
+          <span class="tag">Express.js</span>
+          <span class="tag">TypeORM</span>
+          <span class="tag">C#</span>
+          <span class="tag">.NET</span>
+          <span class="tag">REST APIs</span>
+          <span class="tag">Microservices</span>
+          <span class="tag">RabbitMQ</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4 class="skill-group-label">Frontend</h4>
+        <div class="tag-list">
+          <span class="tag">React.js</span>
+          <span class="tag">Next.js</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">Redux</span>
+          <span class="tag">Context API</span>
+          <span class="tag">React Native</span>
+          <span class="tag">Styled Components</span>
+          <span class="tag">HTML / CSS</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4 class="skill-group-label">Database</h4>
+        <div class="tag-list">
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">SQL Server</span>
+          <span class="tag">MongoDB</span>
+          <span class="tag">Redis</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4 class="skill-group-label">Cloud &amp; DevOps</h4>
+        <div class="tag-list">
+          <span class="tag">AWS S3 / EC2</span>
+          <span class="tag">GCP</span>
+          <span class="tag">Azure</span>
+          <span class="tag">Docker</span>
+          <span class="tag">Kubernetes</span>
+          <span class="tag">CI/CD</span>
+          <span class="tag">Heroku</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4 class="skill-group-label" data-i18n="skills.practices">Práticas</h4>
+        <div class="tag-list">
+          <span class="tag">Clean Architecture</span>
+          <span class="tag">SOLID</span>
+          <span class="tag">Clean Code</span>
+          <span class="tag">Scrum / Kanban</span>
+          <span class="tag">Code Review</span>
+          <span class="tag" data-i18n="skills.mentoring">Mentoria</span>
+          <span class="tag">Jest</span>
+          <span class="tag">Swagger</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-					</div>
-					<div class="col-md-4 text-center">
-						<div class="feature-left">
-							<span class="icon">
-								<i class="icon-chat"></i>
-							</span>
-							<div class="feature-copy">
-								<h3>Suporte</h3>
-								<p>Suporte e manutenção à sistemas construídos com as tecnologias que trabalho.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+<!-- ===== SERVICES ===== -->
+<section id="services" class="section-alt">
+  <div class="container">
+    <h2 class="section-title" data-i18n="services.title">Serviços</h2>
+    <div class="services-grid">
+      <div class="service-item">
+        <span class="service-icon" aria-hidden="true"><i class="icon-browser"></i></span>
+        <h3 data-i18n="services.web.title">Desenvolvimento Web</h3>
+        <p data-i18n="services.web.desc">Aplicações web completas, do backend à interface, com React, Next.js e Node.js.</p>
+      </div>
+      <div class="service-item">
+        <span class="service-icon" aria-hidden="true"><i class="icon-mobile"></i></span>
+        <h3 data-i18n="services.mobile.title">Desenvolvimento Mobile</h3>
+        <p data-i18n="services.mobile.desc">Apps para Android e iOS com React Native, amplamente utilizado por grandes empresas.</p>
+      </div>
+      <div class="service-item">
+        <span class="service-icon" aria-hidden="true"><i class="icon-code"></i></span>
+        <h3 data-i18n="services.api.title">APIs &amp; Microsserviços</h3>
+        <p data-i18n="services.api.desc">APIs RESTful escaláveis e arquitetura de microsserviços com Node.js, NestJS e Docker.</p>
+      </div>
+      <div class="service-item">
+        <span class="service-icon" aria-hidden="true"><i class="icon-info"></i></span>
+        <h3 data-i18n="services.consulting.title">Consultoria Técnica</h3>
+        <p data-i18n="services.consulting.desc">Avaliação de arquitetura, revisão de código, definição de stack e roadmap técnico.</p>
+      </div>
+      <div class="service-item">
+        <span class="service-icon" aria-hidden="true"><i class="icon-lightbulb"></i></span>
+        <h3 data-i18n="services.leadership.title">Liderança Técnica</h3>
+        <p data-i18n="services.leadership.desc">Liderança de squads ágeis, mentoria de devs, code review e alinhamento com stakeholders.</p>
+      </div>
+      <div class="service-item">
+        <span class="service-icon" aria-hidden="true"><i class="icon-chat"></i></span>
+        <h3 data-i18n="services.support.title">Suporte &amp; Manutenção</h3>
+        <p data-i18n="services.support.desc">Suporte contínuo e manutenção evolutiva de sistemas existentes.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-	<div id="fh5co-skills" class="animate-box">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Skills</h2>
-				</div>
-			</div>
-			<div class="row row-pb-md">
-				<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-					<div class="chart" data-percent="90"><span><strong>NodeJs</strong>90%</span></div>
-				</div>
-				<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-					<div class="chart" data-percent="95"><span><strong>ReactJs</strong>95%</span></div>
-				</div>
-				<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-					<div class="chart" data-percent="85"><span><strong>SQL</strong>85%</span></div>
-				</div>
-				<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-					<div class="chart" data-percent="95"><span><strong>React Native</strong>95%</span></div>
-				</div>				
+<!-- ===== CONTACT ===== -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-inner">
+      <h2 class="section-title" data-i18n="contact.title">Vamos conversar?</h2>
+      <p class="contact-desc" data-i18n="contact.desc">Entre em contato para um orçamento ou para trocar uma ideia sobre seu projeto. Respondo em até 24h.</p>
+      <div class="contact-cards">
+        <a href="mailto:matheusgdeveloper@gmail.com?subject=Olá Matheus&body=Descreva aqui qual a sua necessidade que retornarei o mais brevemente possível." class="contact-card">
+          <span class="contact-card-icon"><i class="icon-envelope" aria-hidden="true"></i></span>
+          <span class="contact-card-label">Email</span>
+          <span class="contact-card-value">matheusgdeveloper@gmail.com</span>
+        </a>
+        <a href="https://wa.me/5517992856073" target="_blank" rel="noopener" class="contact-card">
+          <span class="contact-card-icon"><i class="icon-whatsapp" aria-hidden="true"></i></span>
+          <span class="contact-card-label">WhatsApp</span>
+          <span class="contact-card-value">+55 (17) 99285-6073</span>
+        </a>
+        <a href="https://www.linkedin.com/in/matheus-gomes-node-dev/" target="_blank" rel="noopener" class="contact-card">
+          <span class="contact-card-icon"><i class="icon-linkedin2" aria-hidden="true"></i></span>
+          <span class="contact-card-label">LinkedIn</span>
+          <span class="contact-card-value">/in/matheus-gomes-node-dev</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
-				<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-					<div class="chart" data-percent="85"><span><strong>C#</strong>85%</span></div>
-				</div>
-				<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-					<div class="chart" data-percent="70"><span><strong>AWS</strong>70%</span></div>
-				</div>
-				<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-					<div class="chart" data-percent="90"><span><strong>Typescript</strong>90%</span></div>
-				</div>
-				<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-					<div class="chart" data-percent="90"><span><strong>HTML/CSS</strong>90%</span></div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-6">
-					<div class="progress-wrap">
-						<h3><span class="name-left">NodeJs</span><span class="value-right">90%</span></h3>
-						<div class="progress">
-						  <div class="progress-bar progress-bar-1 progress-bar-striped active" role="progressbar"
-						  aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:90%">
-						  </div>
-						</div>
-					</div>
-					<div class="progress-wrap">
-						<h3><span class="name-left">ReactJs</span><span class="value-right">95%</span></h3>
-						<div class="progress">
-						  <div class="progress-bar progress-bar-2 progress-bar-striped active" role="progressbar"
-						  aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:95%">
-						  </div>
-						</div>
-					</div>
-					<div class="progress-wrap">
-						<h3><span class="name-left">SQL</span><span class="value-right">85%</span></h3>
-						<div class="progress">
-						  <div class="progress-bar progress-bar-3 progress-bar-striped active" role="progressbar"
-						  aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:85%">
-						  </div>
-						</div>
-					</div>
-					<div class="progress-wrap">
-						<h3><span class="name-left">React Native</span><span class="value-right">95%</span></h3>
-						<div class="progress">
-						  <div class="progress-bar progress-bar-4 progress-bar-striped active" role="progressbar"
-						  aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:95%">
-						  </div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="progress-wrap">
-						<h3><span class="name-left">C#</span><span class="value-right">85%</span></h3>
-						<div class="progress">
-						  <div class="progress-bar progress-bar-5 progress-bar-striped active" role="progressbar"
-						  aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:85%">
-						  </div>
-						</div>
-					</div>
-					<div class="progress-wrap">
-						<h3><span class="name-left">AWS</span><span class="value-right">70%</span></h3>
-						<div class="progress">
-						  <div class="progress-bar progress-bar-striped active" role="progressbar"
-						  aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
-						  </div>
-						</div>
-					</div>
-					<div class="progress-wrap">
-						<h3><span class="name-left">Typescript</span><span class="value-right">90%</span></h3>
-						<div class="progress">
-						  <div class="progress-bar progress-bar-1 progress-bar-striped active" role="progressbar"
-						  aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:90%">
-						  </div>
-						</div>
-					</div>
-					<div class="progress-wrap">
-						<h3><span class="name-left">HTML/CSS</span><span class="value-right">90%</span></h3>
-						<div class="progress">
-						  <div class="progress-bar progress-bar-3 progress-bar-striped active" role="progressbar"
-						  aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:90%">
-						  </div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+<!-- ===== FOOTER ===== -->
+<footer id="footer">
+  <div class="container">
+    <p>&copy; 2026 Matheus Gomes. <span data-i18n="footer.rights">Todos os direitos reservados.</span></p>
+  </div>
+</footer>
 
-	<!-- <div id="fh5co-work" class="fh5co-bg-dark">
-		<div class="container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Work</h2>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="#" class="work" style="background-image: url(images/portfolio-1.jpg);">
-						<div class="desc">
-							<h3>Project Name</h3>
-							<span>Illustration</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="#" class="work" style="background-image: url(images/portfolio-2.jpg);">
-						<div class="desc">
-							<h3>Project Name</h3>
-							<span>Brading</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="#" class="work" style="background-image: url(images/portfolio-3.jpg);">
-						<div class="desc">
-							<h3>Project Name</h3>
-							<span>Illustration</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="#" class="work" style="background-image: url(images/portfolio-4.jpg);">
-						<div class="desc">
-							<h3>Project Name</h3>
-							<span>Design</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="#" class="work" style="background-image: url(images/portfolio-5.jpg);">
-						<div class="desc">
-							<h3>Project Name</h3>
-							<span>Website</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="#" class="work" style="background-image: url(images/portfolio-6.jpg);">
-						<div class="desc">
-							<h3>Project Name</h3>
-							<span>Illustration</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="#" class="work" style="background-image: url(images/portfolio-7.jpg);">
-						<div class="desc">
-							<h3>Project Name</h3>
-							<span>Brading</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="#" class="work" style="background-image: url(images/portfolio-8.jpg);">
-						<div class="desc">
-							<h3>Project Name</h3>
-							<span>Illustration</span>
-						</div>
-					</a>
-				</div>
-			</div>
-		</div>
-	</div>
+<!-- Back to top -->
+<a href="#hero" class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+  <i class="icon-arrow-up22" aria-hidden="true"></i>
+</a>
 
-	<div id="fh5co-blog">
-		<div class="container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Post on Medium</h2>
-					<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-4">
-					<div class="fh5co-blog animate-box">
-						<a href="#" class="blog-bg" style="background-image: url(images/portfolio-1.jpg);"></a>
-						<div class="blog-text">
-							<span class="posted_on">Mar. 15th 2016</span>
-							<h3><a href="#">Photoshoot On The Street</a></h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-							<ul class="stuff">
-								<li><i class="icon-heart2"></i>249</li>
-								<li><i class="icon-eye2"></i>308</li>
-								<li><a href="#">Read More<i class="icon-arrow-right22"></i></a></li>
-							</ul>
-						</div> 
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="fh5co-blog animate-box">
-						<a href="#" class="blog-bg" style="background-image: url(images/portfolio-2.jpg);"></a>
-						<div class="blog-text">
-							<span class="posted_on">Mar. 15th 2016</span>
-							<h3><a href="#">Surfing at Philippines</a></h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-							<ul class="stuff">
-								<li><i class="icon-heart2"></i>249</li>
-								<li><i class="icon-eye2"></i>308</li>
-								<li><a href="#">Read More<i class="icon-arrow-right22"></i></a></li>
-							</ul>
-						</div> 
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="fh5co-blog animate-box">
-						<a href="#" class="blog-bg" style="background-image: url(images/portfolio-3.jpg);"></a>
-						<div class="blog-text">
-							<span class="posted_on">Mar. 15th 2016</span>
-							<h3><a href="#">Capture Living On Uderwater</a></h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-							<ul class="stuff">
-								<li><i class="icon-heart2"></i>249</li>
-								<li><i class="icon-eye2"></i>308</li>
-								<li><a href="#">Read More<i class="icon-arrow-right22"></i></a></li>
-							</ul>
-						</div> 
-					</div>
-				</div>
-			</div>
-		</div>
-	</div> -->
+<script>
+(function () {
+  'use strict';
 
-	<div id="fh5co-started" class="fh5co-bg-dark">
-		<div class="overlay"></div>
-		<div class="container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Contate-me!</h2>
-					<p>Entre em contato comigo para fazer um orçamento sem compromisso!</p>
-					<div class="contact-container">
-						<p><a href="mailto:matheusgdeveloper@gmail.com?subject=Olá Matheus&body=Descreva aqui qual a sua necessidade que retornarei o mais brevemente possível." class="btn btn-primary btn-lg">E-mail</a></p>
-						<p><a href="https://wa.me/5517992856073" target="_blank" class="btn btn-primary btn-lg">Whatsapp</a></p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+  // ===== i18n =====
+  var strings = {
+    pt: {
+      'nav.about': 'Sobre',
+      'nav.experience': 'Experiência',
+      'nav.skills': 'Skills',
+      'nav.services': 'Serviços',
+      'nav.contact': 'Contato',
+      'hero.badge': 'Disponível para novos projetos',
+      'hero.greeting': 'Olá, eu sou',
+      'hero.title': 'Tech Lead & Dev Fullstack Sênior',
+      'hero.cta': 'Entrar em contato',
+      'hero.linkedin': 'Ver LinkedIn',
+      'hero.stat.years': 'anos de exp.',
+      'hero.stat.companies': 'empresas',
+      'hero.stat.apis': 'APIs integradas',
+      'about.title': 'Sobre mim',
+      'about.nameLabel': 'Nome',
+      'about.phoneLabel': 'Telefone',
+      'about.locationLabel': 'Localização',
+      'about.location': 'Bebedouro, SP — Brasil',
+      'about.p1': 'Comecei a programar em 2015 e, desde então, nunca tive um projeto igual ao anterior. Passei por setores bem diferentes — aviação, saúde, fintech, hotelaria, governo — e essa variedade me ensinou a enxergar os problemas antes de pensar na solução técnica.',
+      'about.p2': 'Hoje sou Tech Lead na Global Hitss. Uma das entregas que mais me orgulha foi construir, junto com minha equipe, um sistema para o governo federal integrando mais de 10 APIs de terceiros. Durante uma migração crítica de dados legados, consegui triplicar a performance do sistema usando concorrência com Workers em Node.js — o tipo de desafio que me faz levantar cedo.',
+      'about.p3': 'Minha praia é o back-end: arquitetura que aguenta crescimento, APIs que fazem sentido, código que não vira pesadelo em seis meses. Node.js e React são meu stack principal hoje, mas o que realmente importa pra mim é entregar algo que funcione de verdade e que a equipe consiga evoluir.',
+      'experience.title': 'Experiência',
+      'exp.present': 'Atualmente',
+      'exp.parttime': '(part-time)',
+      'exp.globalHitss.role': 'Líder de Squad / Tech Lead',
+      'exp.globalHitss.b1': 'Liderança de squad com 5 desenvolvedores seniores e plenos, garantindo entregas de alta qualidade.',
+      'exp.globalHitss.b2': 'Desenvolvimento de sistema para o governo federal integrando mais de 10 APIs de terceiros.',
+      'exp.globalHitss.b3': 'Performance triplicada durante migração de dados legados via Worker Loads (concorrência) em Node.js.',
+      'exp.globalHitss.b4': 'Arquitetura de microsserviços com Docker, Kubernetes, AWS S3, MongoDB e Redis.',
+      'exp.vega.role': 'Líder Frontend',
+      'exp.vega.b1': 'Arquitetura e desenvolvimento de sistemas web para o setor hoteleiro.',
+      'exp.vega.b2': 'Consumo de APIs, code review e liderança do time frontend.',
+      'exp.spread.role': 'Líder Técnico',
+      'exp.spread.b1': 'Arquitetura e desenvolvimento de sistemas web e APIs com Clean Architecture.',
+      'exp.spread.b2': 'Code review, documentação técnica e mentoria de desenvolvedores.',
+      'exp.academiadapele.role': 'Líder Backend',
+      'exp.academiadapele.b1': 'Arquitetura e migração de toda a infraestrutura para a nuvem (GCP).',
+      'exp.academiadapele.b2': 'Integrações com agenda, prontuários eletrônicos e gateways de pagamento.',
+      'exp.academiadapele.b3': 'Otimização de queries SQL, reduzindo tempos de resposta significativamente.',
+      'exp.solfarma.role': 'Desenvolvedor Fullstack',
+      'exp.solfarma.b1': 'Desenvolvimento e manutenção do ERP e e-commerce criado do zero em React.',
+      'exp.solfarma.b2': 'Regras de negócio mantidas em banco de dados — procedures, functions, views e triggers.',
+      'exp.trinapse.role': 'Desenvolvedor Fullstack',
+      'exp.trinapse.b1': 'Sistemas web e apps mobile para setores: aéreo, financeiro, usineiro, imobiliário e alimentação.',
+      'exp.trinapse.b2': 'Implementação de soluções cloud com AWS e Azure; redução de bugs via code review.',
+      'exp.syshouse.role': 'Desenvolvedor',
+      'exp.syshouse.b1': 'Desenvolvimento e manutenção de sistemas desktop para comércio, transportadoras e farmácias.',
+      'education.title': 'Educação',
+      'education.degree': 'Bacharel em Sistemas de Informação',
+      'skills.title': 'Skills',
+      'skills.practices': 'Práticas',
+      'skills.mentoring': 'Mentoria',
+      'services.title': 'Serviços',
+      'services.web.title': 'Desenvolvimento Web',
+      'services.web.desc': 'Aplicações web completas, do backend à interface, com React, Next.js e Node.js.',
+      'services.mobile.title': 'Desenvolvimento Mobile',
+      'services.mobile.desc': 'Apps para Android e iOS com React Native, amplamente utilizado por grandes empresas.',
+      'services.api.title': 'APIs & Microsserviços',
+      'services.api.desc': 'APIs RESTful escaláveis e arquitetura de microsserviços com Node.js, NestJS e Docker.',
+      'services.consulting.title': 'Consultoria Técnica',
+      'services.consulting.desc': 'Avaliação de arquitetura, revisão de código, definição de stack e roadmap técnico.',
+      'services.leadership.title': 'Liderança Técnica',
+      'services.leadership.desc': 'Liderança de squads ágeis, mentoria de devs, code review e alinhamento com stakeholders.',
+      'services.support.title': 'Suporte & Manutenção',
+      'services.support.desc': 'Suporte contínuo e manutenção evolutiva de sistemas existentes.',
+      'contact.title': 'Vamos conversar?',
+      'contact.desc': 'Entre em contato para um orçamento ou para trocar uma ideia sobre seu projeto. Respondo em até 24h.',
+      'contact.email': 'Enviar e-mail',
+      'footer.rights': 'Todos os direitos reservados.'
+    },
+    en: {
+      'nav.about': 'About',
+      'nav.experience': 'Experience',
+      'nav.skills': 'Skills',
+      'nav.services': 'Services',
+      'nav.contact': 'Contact',
+      'hero.badge': 'Available for new projects',
+      'hero.greeting': "Hi, I'm",
+      'hero.title': 'Tech Lead & Senior Fullstack Developer',
+      'hero.cta': 'Get in touch',
+      'hero.linkedin': 'View LinkedIn',
+      'hero.stat.years': 'years exp.',
+      'hero.stat.companies': 'companies',
+      'hero.stat.apis': 'APIs integrated',
+      'about.title': 'About me',
+      'about.nameLabel': 'Name',
+      'about.phoneLabel': 'Phone',
+      'about.locationLabel': 'Location',
+      'about.location': 'Bebedouro, SP — Brazil',
+      'about.p1': "I've been writing code since 2015, and no two projects have ever been the same. Aviation, healthcare, fintech, hospitality, government — the variety taught me to understand the problem first and reach for the tech stack second.",
+      'about.p2': "These days I'm Tech Lead at Global Hitss. One of the things I'm most proud of: leading a team that built a federal government system integrating over 10 third-party APIs. During a critical legacy data migration, I tripled the system's throughput by implementing Node.js worker concurrency — exactly the kind of problem I enjoy waking up early for.",
+      'about.p3': "My sweet spot is backend: architecture that holds up as you scale, APIs that make sense, code that doesn't turn into a nightmare six months later. Node.js and React are my main tools today, but what I really care about is shipping something that works and that a team can keep building on.",
+      'experience.title': 'Experience',
+      'exp.present': 'Present',
+      'exp.parttime': '(part-time)',
+      'exp.globalHitss.role': 'Squad Lead / Tech Lead',
+      'exp.globalHitss.b1': 'Led a squad of 5 senior and mid-level developers, ensuring high-quality deliverables.',
+      'exp.globalHitss.b2': 'Built a federal government system integrating more than 10 third-party APIs.',
+      'exp.globalHitss.b3': 'Tripled system performance during legacy data migration via Worker Loads (concurrency) in Node.js.',
+      'exp.globalHitss.b4': 'Microservices architecture with Docker, Kubernetes, AWS S3, MongoDB, and Redis.',
+      'exp.vega.role': 'Frontend Lead',
+      'exp.vega.b1': 'Architecture and development of web systems for the hospitality sector.',
+      'exp.vega.b2': 'API consumption, code review, and frontend team leadership.',
+      'exp.spread.role': 'Technical Lead',
+      'exp.spread.b1': 'Architecture and development of web systems and APIs with Clean Architecture.',
+      'exp.spread.b2': 'Code review, technical documentation, and developer mentoring.',
+      'exp.academiadapele.role': 'Backend Lead',
+      'exp.academiadapele.b1': 'Architecture and full infrastructure migration to the cloud (GCP).',
+      'exp.academiadapele.b2': 'Third-party integrations: scheduling, electronic medical records, and payment gateways.',
+      'exp.academiadapele.b3': 'SQL query optimization, significantly reducing API response times.',
+      'exp.solfarma.role': 'Fullstack Developer',
+      'exp.solfarma.b1': 'Development and maintenance of ERP and e-commerce built from scratch in React.',
+      'exp.solfarma.b2': 'Business rules maintained in the database — stored procedures, functions, views, and triggers.',
+      'exp.trinapse.role': 'Fullstack Developer',
+      'exp.trinapse.b1': 'Web systems and mobile apps for: airline, financial, industrial, real estate, and food sectors.',
+      'exp.trinapse.b2': 'Cloud solutions with AWS and Azure; reduced production bugs by introducing code review processes.',
+      'exp.syshouse.role': 'Developer',
+      'exp.syshouse.b1': 'Development and maintenance of desktop systems for retail, transportation, and pharmacies.',
+      'education.title': 'Education',
+      'education.degree': 'Bachelor of Information Systems',
+      'skills.title': 'Skills',
+      'skills.practices': 'Practices',
+      'skills.mentoring': 'Mentoring',
+      'services.title': 'Services',
+      'services.web.title': 'Web Development',
+      'services.web.desc': 'Full-stack web applications, from backend to UI, with React, Next.js, and Node.js.',
+      'services.mobile.title': 'Mobile Development',
+      'services.mobile.desc': 'Android and iOS apps with React Native, widely adopted by large companies.',
+      'services.api.title': 'APIs & Microservices',
+      'services.api.desc': 'Scalable RESTful APIs and microservices architecture with Node.js, NestJS, and Docker.',
+      'services.consulting.title': 'Technical Consulting',
+      'services.consulting.desc': 'Architecture review, code audit, stack definition, and technical roadmap.',
+      'services.leadership.title': 'Technical Leadership',
+      'services.leadership.desc': 'Agile squad leadership, developer mentoring, code reviews, and stakeholder alignment.',
+      'services.support.title': 'Support & Maintenance',
+      'services.support.desc': 'Ongoing support and evolutionary maintenance of existing systems.',
+      'contact.title': "Let's talk?",
+      'contact.desc': 'Reach out for a quote or to discuss your project. I reply within 24h.',
+      'contact.email': 'Send email',
+      'footer.rights': 'All rights reserved.'
+    }
+  };
 
-	<!-- <div id="map" class="fh5co-map"></div>
-	</div> -->
-	
-	
-	<div id="fh5co-footer text-center">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 text-center pt-15">
-					<p>&copy; 2026 Matheus Gomes. Todos os direitos reservados.</p>
-				</div>
-			</div>
-		</div>
-	</div>
+  var currentLang = 'pt';
 
-	<div class="gototop js-top">
-		<a href="#" class="js-gotop"><i class="icon-arrow-up22"></i></a>
-	</div>
-	
-	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
-	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
-	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
-	<!-- Stellar Parallax -->
-	<script src="js/jquery.stellar.min.js"></script>
-	<!-- Easy PieChart -->
-	<script src="js/jquery.easypiechart.min.js"></script>
-	
-	<!-- Main -->
-	<script src="js/main.js"></script>
+  window.setLang = function (lang) {
+    currentLang = lang;
+    document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en-US';
+    document.title = lang === 'pt'
+      ? 'Matheus Gomes — Tech Lead & Dev Fullstack Sênior'
+      : 'Matheus Gomes — Tech Lead & Senior Fullstack Developer';
 
-	</body>
+    document.querySelectorAll('[data-i18n]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n');
+      if (strings[lang][key] !== undefined) {
+        el.textContent = strings[lang][key];
+      }
+    });
+
+    document.querySelectorAll('.lang-btn').forEach(function (btn) {
+      var isActive = btn.getAttribute('data-lang') === lang;
+      btn.classList.toggle('active', isActive);
+      btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+    });
+  };
+
+  // ===== Nav scroll =====
+  var nav = document.getElementById('nav');
+  var backToTop = document.getElementById('backToTop');
+
+  window.addEventListener('scroll', function () {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+    backToTop.classList.toggle('visible', window.scrollY > 320);
+  }, { passive: true });
+
+  // ===== Mobile menu =====
+  var menuBtn = document.getElementById('navMenuBtn');
+  var mobileMenu = document.getElementById('navMobile');
+
+  menuBtn.addEventListener('click', function () {
+    var isOpen = mobileMenu.classList.toggle('open');
+    menuBtn.classList.toggle('open', isOpen);
+    menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    mobileMenu.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+  });
+
+  window.closeMobileMenu = function () {
+    mobileMenu.classList.remove('open');
+    menuBtn.classList.remove('open');
+    menuBtn.setAttribute('aria-expanded', 'false');
+    mobileMenu.setAttribute('aria-hidden', 'true');
+  };
+
+  // ===== Active nav on scroll =====
+  var navLinks = document.querySelectorAll('.nav-links a');
+  var allSections = document.querySelectorAll('section[id]');
+
+  var navObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        var id = entry.target.getAttribute('id');
+        navLinks.forEach(function (a) {
+          a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+        });
+      }
+    });
+  }, { threshold: 0.35, rootMargin: '-64px 0px -35% 0px' });
+
+  allSections.forEach(function (s) { navObserver.observe(s); });
+
+  // ===== Scroll reveal =====
+  var revealObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+
+  document.querySelectorAll('.exp-item, .service-item, .skill-group, .about-grid').forEach(function (el) {
+    revealObserver.observe(el);
+  });
+
+  // ===== Hero entrance =====
+  setTimeout(function () {
+    document.body.classList.add('loaded');
+  }, 80);
+
+})();
+</script>
+
+</body>
 </html>
-
